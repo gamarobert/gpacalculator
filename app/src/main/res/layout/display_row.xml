@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent" android:id="@+id/displayAllID">
+
+    <TextView
+            android:text="Class Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/classDisplay" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"/>
+    <TextView
+            android:text="Class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/classDisplayID" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/classDisplay"
+            app:layout_constraintStart_toStartOf="@+id/classDisplay" android:layout_marginStart="8dp"/>
+    <TextView
+            android:text="Grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gradeDisplay" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/classDisplayID"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+    <TextView
+            android:text="grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gradeDisplayID" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/gradeDisplay"
+            app:layout_constraintStart_toStartOf="@+id/gradeDisplay"
+            android:layout_marginStart="8dp"/>
+    <TextView
+            android:text="Units"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/unitDisplay" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/gradeDisplayID" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"/>
+    <TextView
+            android:text="unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/unitDisplayID" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/unitDisplay"
+            app:layout_constraintStart_toStartOf="@+id/unitDisplay" android:layout_marginStart="8dp"/>
+</android.support.constraint.ConstraintLayout>

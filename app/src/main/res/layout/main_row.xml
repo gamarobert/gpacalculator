@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <TextView
+            android:text="Course Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/courseView"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" android:layout_marginStart="8dp"/>
+    <EditText
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/courseInput" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/courseView" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="@+id/courseView" android:hint="411"/>
+    <EditText
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/gradeInput" android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/gradeView" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" android:hint="A"/>
+    <TextView
+            android:text="Grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gradeView" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/courseInput" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"/>
+    <TextView
+            android:text="Units"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/unitView" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/gradeInput" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"/>
+    <EditText
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/unitInput" android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/unitView" android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent" android:hint="4"/>
+</android.support.constraint.ConstraintLayout>
