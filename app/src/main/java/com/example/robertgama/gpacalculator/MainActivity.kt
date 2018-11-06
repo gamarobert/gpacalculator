@@ -9,15 +9,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.Serializable
 import java.util.*
 
 private var courses = arrayListOf<Info> ()
 
-data class Info(val course : String, val grade : String, val units : String)
+data class Info(val course : String, val grade : String, val units : String) : Serializable
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -68,7 +70,7 @@ class MainActivity : AppCompatActivity() {
         doneButton.setOnClickListener{
 
             val intent = Intent(this@MainActivity, SecondActivity::class.java)
-            intent.putExtra("ARRAY_NAME", courses  )
+            intent.putExtra("listPASS", courses as Serializable )
 
             startActivity(intent)
 

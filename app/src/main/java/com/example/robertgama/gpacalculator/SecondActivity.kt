@@ -17,11 +17,17 @@ class SecondActivity : AppCompatActivity() {
         setContentView(R.layout.activity_second)
     }
 
-    val newArray = intent.getStringArrayListExtra("ARRAY_NAME")
+
+//getIntent().getExtras().getSerializableExtra(EXTRA_PEOPLE) as? People
+    val newArray = intent.extras.get("listPASS") as ArrayList<Info>
 
     val listView = findViewById<ListView>(R.id.displayAllID)
 
-    val adapter = ArrayAdapter(this, R.layout.display_row, R.id.classDisplayID, newArray)
+    // https://medium.com/@developine/serialize-deserialize-data-class-in-kotlin-dfaec8b63f05
+
+    val adapter = ArrayAdapter(this, R.layout.display_row, R.id.classDisplayID, listPass)
+
+
 
     listView.adapter = object : ArrayAdapter<Info>(this, R.layout.display_row, R.id.classDisplayID, newArray){
 
