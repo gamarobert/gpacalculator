@@ -1,6 +1,7 @@
 package com.example.robertgama.gpacalculator
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -19,6 +20,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
 
         val listView = findViewById<ListView>(R.id.prev_listview)
 
@@ -58,6 +61,16 @@ class MainActivity : AppCompatActivity() {
             }else{
                 Toast.makeText(applicationContext, "Don't leave any fields blank!", Toast.LENGTH_SHORT).show()
             }
+
+        }
+
+
+        doneButton.setOnClickListener{
+
+            val intent = Intent(this@MainActivity, SecondActivity::class.java)
+            intent.putExtra("ARRAY_NAME", courses  )
+
+            startActivity(intent)
 
         }
 
