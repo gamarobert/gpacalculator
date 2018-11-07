@@ -23,11 +23,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
         val listView = findViewById<ListView>(R.id.prev_listview)
-
-        val adapter = ArrayAdapter(this, R.layout.preview_row, R.id.prevClassTextView, courses)
 
         listView.adapter = object : ArrayAdapter<Info>(this, R.layout.preview_row, R.id.prevClassTextView, courses) {
               private val mContext: Context = context
@@ -55,17 +51,21 @@ class MainActivity : AppCompatActivity() {
 
             //check if the EditText have values or not
             if(course.isNotEmpty() && grade.isNotEmpty() && unit.isNotEmpty()) {
+                val adapter : ArrayAdapter<Info> = listView.adapter as ArrayAdapter<Info>
+
                 adapter.add(Info(courseInput.text.toString(), gradeInput.text.toString(), unitInput.text.toString()))
 
                 courseInput.text.clear()
                 gradeInput.text.clear()
                 unitInput.text.clear()
+
+                adapter.notifyDataSetChanged()
+
             }else{
                 Toast.makeText(applicationContext, "Don't leave any fields blank!", Toast.LENGTH_SHORT).show()
             }
 
         }
-
 
         doneButton.setOnClickListener{
 
